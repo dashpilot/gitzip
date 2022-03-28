@@ -14,4 +14,6 @@ console.log(buffer);
   
 // response.status(200).download(buffer);
   
+  return response.status(200);
+  
 }
