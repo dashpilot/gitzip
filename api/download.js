@@ -6,7 +6,7 @@ var content = "inner content of the file";
 zip.addFile("test.txt", Buffer.from(content, "utf8"), "entry comment goes here");
 // add local file
 // zip.addLocalFile("./hello-world.txt");
-zip.addLocalFile("/index.html");
+zip.addLocalFile("/../index.html");
 
 var buffer = zip.toBuffer();
 
