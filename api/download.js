@@ -8,10 +8,10 @@ export default async function handler(request, response) {
   zip.addFile("test.txt", Buffer.from(content, "utf8"), "entry comment goes here");
   
   
-  var filenames = fs.readdirSync("./.output/");
+  var filenames = fs.readdirSync(".output/");
   filenames.forEach(file => {
     console.log(file);
-    zip.addLocalFile("./.output/"+file);
+    zip.addLocalFile(".output/"+file);
   });
  
   
