@@ -14,6 +14,10 @@ console.log(buffer);
   
 // response.status(200).download(buffer);
   
-  return response.status(200);
+  response.setHeader("Content-Type", "application/octet-stream");
+  response.setHeader("Content-Disposition", "inline;filename=somefile.zip");
+
+  
+  response.end('ok');
   
 }
