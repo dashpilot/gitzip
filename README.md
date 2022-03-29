@@ -1,5 +1,5 @@
 # gitzip
-Zip and download the contents of a private/public repo on demand
+Zip and download the contents of a subfolder in a private/public repo on demand
 
 # How to
 
