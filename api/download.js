@@ -7,8 +7,8 @@ export default async function handler(request, response) {
   zip.addFile("test.txt", Buffer.from(content, "utf8"), "entry comment goes here");
   
   // add local file
-  zip.addLocalFile("./src/something.txt");
-  // zip.addLocalFile("./dist/index.html");
+  // zip.addLocalFile("./src/something.txt");
+  zip.addLocalFile("./dist/index.html");
 
   var buffer = zip.toBuffer();
   
