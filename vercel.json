@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/download.js": {
-      "includeFiles": "/dist/**, /src/**"
+      "includeFiles": "/dist/**|/src/**"
     }
   }
 }
