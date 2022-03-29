@@ -8,7 +8,7 @@ export default async function handler(request, response) {
   
   // add local file
   zip.addLocalFile("./src/something.txt");
-  zip.addLocalFile("./dist/index.html");
+  // zip.addLocalFile("./dist/index.html");
 
   var buffer = zip.toBuffer();
   
