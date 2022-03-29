@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 
-const dir = "./output/server/";
+const dir = "./output/server/pages/";
 
 export default async function handler(request, response) {
   
