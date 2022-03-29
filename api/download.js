@@ -1,3 +1,4 @@
+const fs = require('fs');
 var AdmZip = require("adm-zip");
 var zip = new AdmZip();
 
@@ -6,9 +7,11 @@ export default async function handler(request, response) {
   var content = "inner content of the file";
   zip.addFile("test.txt", Buffer.from(content, "utf8"), "entry comment goes here");
   
-  // add local file
-  // zip.addLocalFile("./src/something.txt");
-  zip.addLocalFile("./dist/index.html");
+  var filenames = fs.readdirSync("./dist/");
+  filenames.forEach(file => {
+    console.log(file);
+    zip.addLocalFile("./dist/"+file);
+  });
 
   var buffer = zip.toBuffer();
   
