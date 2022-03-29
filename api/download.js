@@ -18,6 +18,6 @@ console.log(buffer);
   response.setHeader("Content-Disposition", "inline;filename=somefile.zip");
 
   
-  response.end('ok');
+  response.end(buffer);
   
 }
