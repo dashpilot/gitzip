@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 
-const dir = "./output/server/pages/api";
+const dir = "./output/server/pages/api/___vc";
 
 export default async function handler(request, response) {
   
