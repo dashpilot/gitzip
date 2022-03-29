@@ -2,6 +2,9 @@
   "functions": {
     "api/download.js": {
       "includeFiles": "dist/**"
+    },
+     "api/list-build.js": {
+      "includeFiles": "dist/**"
     }
   }
 }
