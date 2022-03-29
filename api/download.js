@@ -9,10 +9,10 @@ export default async function handler(request, response) {
   zip.addFile("at-runtime.txt", Buffer.from(content, "utf8"), "entry comment goes here");
   
   
-  var filenames = fs.readdirSync(join(__dirname, 'zip'));
+  var filenames = fs.readdirSync(join(__dirname, '..', 'zip'));
   filenames.forEach(file => {
     console.log(file);
-    zip.addLocalFile(join(__dirname, 'zip', file));
+    zip.addLocalFile(join(__dirname, '..', 'zip', file));
   });
  
   
