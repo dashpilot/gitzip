@@ -4,7 +4,7 @@
       "includeFiles": "dist/**"
     },
      "api/list-build.js": {
-      "includeFiles": "dist/**"
+      "includeFiles": "**"
     }
   }
 }
