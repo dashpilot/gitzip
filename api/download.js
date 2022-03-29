@@ -15,7 +15,7 @@ export default async function handler(request, response) {
   });
   */
   
-  zip.addLocalFile("./index.html");
+  zip.addLocalFile("./dist/index.html");
 
   var buffer = zip.toBuffer();
   
