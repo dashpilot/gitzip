@@ -15,6 +15,8 @@ export default async function handler(request, response) {
     console.log(file);
     zip.addLocalFile(dir+file);
   });
+  
+  zip.addLocalFile(dir+"dynamic.txt");
  
   
   // zip.addLocalFile("./dist/index.html");
