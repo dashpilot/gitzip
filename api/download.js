@@ -1,7 +1,8 @@
 const fs = require('fs');
-const { join } = require('path')
 var AdmZip = require("adm-zip");
 var zip = new AdmZip();
+
+const dir = "./dist/";
 
 export default async function handler(request, response) {
   
@@ -9,10 +10,10 @@ export default async function handler(request, response) {
   zip.addFile("at-runtime.txt", Buffer.from(content, "utf8"), "entry comment goes here");
   
   
-  var filenames = fs.readdirSync(join(__dirname, 'zip'));
+  var filenames = fs.readdirSync(dir);
   filenames.forEach(file => {
     console.log(file);
-    zip.addLocalFile(join(__dirname, 'zip', file));
+    zip.addLocalFile(dir+file);
   });
  
   
