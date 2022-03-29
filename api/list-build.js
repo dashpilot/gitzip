@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 
-const dir = "";
+const dir = "./";
 
 export default async function handler(request, response) {
   
